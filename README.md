@@ -71,3 +71,6 @@
 
 # 画面遷移図
 https://www.figma.com/file/mLKE82QJF5lNs8f6kq3Mcd/A-ieba_for_you?node-id=0%3A1&t=DUWfAknlIVNNNqn8-1
+
+# ER図
+https://drive.google.com/file/d/1tNBqJVQd0fo7tlsHQGDnrVVk21m6LTjA/view?usp=share_link
