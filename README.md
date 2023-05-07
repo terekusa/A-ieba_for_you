@@ -74,3 +74,26 @@ https://www.figma.com/file/mLKE82QJF5lNs8f6kq3Mcd/A-ieba_for_you?node-id=0%3A1&t
 
 # ER図
 https://drive.google.com/file/d/1JBfTHjmBELcNuf7yG7-jVo0HuRchQDoN/view?usp=sharing
+
+### Userテーブル　（ユーザー情報）
+- name　（ユーザーネーム）
+- email　（ユーザーメールアドレス）
+- crypted_password　（ユーザーパスワード）
+- salt　（ユーザーパスワード）
+- avater　（ユーザーアバター画像）
+- role　（ユーザー権限）
+### Postテーブル　（ユーザーが投稿した「ああ言えば良かった」と思った言葉）
+- word　（「ああ言えば良かった」と思った言葉）
+- image　（投稿された言葉のイメージ画像）
+### Commentテーブル　（ユーザーの投稿に対するコメント）
+- body　（コメント）
+### Likeテーブル　（ユーザーの投稿に対する「LIKE」）
+### Notificationテーブル　（投稿へのコメントやLIKEの通知）
+- notificable_type　（ポリモーフィック関連を使用　関連付けをするテーブル名が入る）
+- notificable_id　（ポリモーフィック関連を使用　関連付けをしたレコードのIDが入る）
+- read　（未読／既読管理）
+### Partnerテーブル　（投稿の選択肢　会話の相手）
+### Genreテーブル　（投稿の選択肢　会話のジャンル）
+### Situationテーブル　（投稿の選択肢　会話のシチュエーション）
+### Episodeテーブル　（投稿の入力欄　会話に関するエピソード）
+### Partners_words　（投稿の入力欄　ああ言えば良かったと思った、相手の会話）
