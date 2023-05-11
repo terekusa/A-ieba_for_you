@@ -73,7 +73,7 @@
 https://www.figma.com/file/mLKE82QJF5lNs8f6kq3Mcd/A-ieba_for_you?node-id=0%3A1&t=DUWfAknlIVNNNqn8-1
 
 # ER図
-https://drive.google.com/file/d/1Hb--f8qaKd2_MQVmFut5f2ziLJibO4JG/view?usp=sharing
+https://drive.google.com/file/d/1XIaaVNcdltoHo4enDv5q9gSl8OECdr2V/view?usp=sharing
 
 ### Userテーブル　（ユーザー情報）
 - name　（ユーザーネーム）
@@ -95,6 +95,7 @@ https://drive.google.com/file/d/1Hb--f8qaKd2_MQVmFut5f2ziLJibO4JG/view?usp=shari
 - notificable_id　（ポリモーフィック関連を使用　関連付けをしたレコードのIDが入る）
 - check　（未読／既読管理）
 ### Post_detailsテーブル　（Partner、Genre、Situationの継承元）
-### Partnersテーブル　（投稿の選択肢　会話の相手）
-### Genresテーブル　（投稿の選択肢　会話のジャンル）
-### Situationsテーブル　（投稿の選択肢　会話のシチュエーション）
+
+Partnersクラス　（投稿の選択肢　会話の相手）
+Genresクラス　（投稿の選択肢　会話のジャンル）
+Situationsクラス　（投稿の選択肢　会話のシチュエーション）
