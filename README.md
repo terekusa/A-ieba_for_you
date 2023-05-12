@@ -73,7 +73,7 @@
 https://www.figma.com/file/mLKE82QJF5lNs8f6kq3Mcd/A-ieba_for_you?node-id=0%3A1&t=DUWfAknlIVNNNqn8-1
 
 # ER図
-https://drive.google.com/file/d/1XIaaVNcdltoHo4enDv5q9gSl8OECdr2V/view?usp=sharing
+https://drive.google.com/file/d/1M5i6QHv5Mb59rcIAMO1jEcEU7MHTB-iH/view?usp=sharing
 
 ### Userテーブル　（ユーザー情報）
 - name　（ユーザーネーム）
