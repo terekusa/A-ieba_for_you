@@ -59,6 +59,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem "annotate"
+  gem "pry-byebug"
 end
 
 group :development do
@@ -73,3 +74,4 @@ group :development do
 
 end
 
+gem "sorcery"
