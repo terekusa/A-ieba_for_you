@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path, success: "投稿しました"
     else
-      flash,now['danger'] = "投稿できませんでした"
+      flash.now['danger'] = "投稿できませんでした"
       render :new
     end
   end
