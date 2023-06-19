@@ -1,6 +1,12 @@
 <header>
-  <%= link_to 'top_page', root_path %>
-  <%= link_to '投稿一覧', posts_path %>
-  <%= link_to '新規投稿', new_post_path %>
-  <%= link_to 'ログアウト', logout_path, data: { "turbo-method": :delete } %>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <%= link_to 'アアイエバ For You', root_path, class: "my-0 me-md-auto font-weight-normal" %>
+    <nav class="my-2 my-md-0 ms-auto">
+      <%= link_to '投稿一覧', posts_path, class: "p-2 text-dark" %>
+      <%= link_to '新規投稿', new_post_path, class: "p-2 text-dark" %>
+    </nav>
+    <%= link_to 'ログアウト', logout_path, data: { "turbo-method": :delete }, class: "btn btn-outline-primary" %>
+  </div>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 </header>
