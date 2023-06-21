@@ -3,6 +3,7 @@
     <%= link_to 'アアイエバ For You', root_path, class: "my-0 me-md-auto font-weight-normal" %>
     <nav class="my-2 my-md-0 ms-auto">
       <%= link_to '投稿一覧', posts_path, class: "p-2 text-dark" %>
+      <%= link_to 'Like一覧', likes_posts_path, class: "p-2 text-dark" %>
       <%= link_to '新規投稿', new_post_path, class: "p-2 text-dark" %>
     </nav>
     <%= link_to 'ログアウト', logout_path, data: { "turbo-method": :delete }, class: "btn btn-outline-primary" %>
