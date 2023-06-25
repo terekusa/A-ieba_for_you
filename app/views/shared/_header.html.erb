@@ -6,7 +6,7 @@
       <%= link_to 'Like一覧', likes_posts_path, class: "p-2 text-dark" %>
       <%= link_to '新規投稿', new_post_path, class: "p-2 text-dark" %>
     </nav>
-    <%= link_to 'ログアウト', logout_path, data: { "turbo-method": :delete }, class: "btn btn-outline-primary" %>
+    <%= link_to (t 'defaults.logout'), logout_path, data: { "turbo-method": :delete }, class: "btn btn-outline-primary" %>
   </div>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

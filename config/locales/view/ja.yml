@@ -1,0 +1,25 @@
+ja:
+  defaults:
+    login: 'ログイン'
+    register: '登録'
+    logout: 'ログアウト'
+    gest_login: 'ゲストログイン'
+  users:
+    new:
+      title: 'ユーザー登録'
+      to_login_page: 'ログインページへ'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      to_register_page: '登録ページへ'
+      password_forget: 'パスワードをお忘れの方はこちら'
+  posts:
+    index:
+      title: '投稿一覧'
+    new:
+      title: '新規作成'
+    likes:
+      title: 'お気に入り一覧'
+  profiles:
+    show:
+      title: 'プロフィール'
