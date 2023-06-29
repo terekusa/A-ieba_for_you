@@ -11,6 +11,11 @@
         <p class="card-text mb-auto">
           <%= post.episode %>
         </p>
+        <% if current_user.own?(post) %>
+          <%= render 'crud_menus', post: post %>
+        <% else %>
+          <%= render 'like_button', post: post  %>
+        <% end %>
         <a href="#" class="stretched-link">Continue reading</a>
       </div>
       <div class="col-auto d-none d-lg-block">
