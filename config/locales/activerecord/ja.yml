@@ -9,4 +9,8 @@ ja:
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         name: '名前'
+      post:
+        word: '言えなかった言葉'
+        partners_word: '相手の言葉・シチュエーション'
+        episode: 'エピソード'
         
