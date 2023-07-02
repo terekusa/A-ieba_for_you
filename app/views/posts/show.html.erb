@@ -1,0 +1,29 @@
+<div class="card mb-2">
+  <div class="card-header">
+    <div class="d-flex flex-column flex-md-row align-items-center p-1 px-md-4 mb-1">
+      <%= @post.user.name %>さんの投稿
+      <nav class="my-2 my-md-0 ms-auto">
+        <%= link_to t('posts.edit.title'), '#', class: "p-2 text-dark" %>
+        <%= link_to t('posts.destroy.title'), '#', class: "p-2 text-dark" %>
+      </nav>
+    </div>
+  </div>
+  <div class="row g-0">
+    <div class="col-md-4 p-md-2">
+      <%= image_tag 'sample.jpg', class: "img-fluid rounded mt-3" %>
+    </div>
+     <div class="col-md-8">
+      <h2 class="card-text d-flex align-items-center justify-content-center my-4 balloon-show-left">
+        <%= @post.partners_word %>
+      </h2>
+    </div>
+    <div class="col-md-4 p-md-2">
+      <%= image_tag 'sample.jpg', class: "img-fluid rounded mt-3" %>
+    </div>
+    <div class="col-md-8">
+      <h2 class="card-text d-flex align-items-center justify-content-center my-4 balloon-show-right">
+        <%= @post.word %>
+      </h2>
+    </div>
+  </div>
+</div>

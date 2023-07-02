@@ -31,6 +31,10 @@ ja:
       no_result: '投稿がありません'
     new:
       title: '新規作成'
+    edit:
+      title: '編集'
+    destroy:
+      title: '削除'
     likes:
       title: 'お気に入り一覧'
   profiles:
