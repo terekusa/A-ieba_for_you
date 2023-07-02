@@ -5,13 +5,15 @@
         <%= image_tag 'sample.jpg', class: "img-fluid rounded mt-3" %>
       </div>
       <div class="col-md-8">
-        <h2 class="card-text text-center my-4 balloon2-left">
-          <%= post.word %>
-        </h2>
-        <% if current_user.own?(post) %>
-          <%= render 'crud_menus', post: post %>
-        <% else %>
-          <%= render 'like_button', post: post  %>
+        <%= link_to post, class: "card-body" do %>
+          <h2 class="card-text d-flex align-items-center justify-content-center my-4 balloon-post">
+            <%= post.word %>
+          </h2>
+          <% if current_user.own?(post) %>
+            <%= render 'crud_menus', post: post %>
+          <% else %>
+            <%= render 'like_button', post: post  %>
+          <% end %>
         <% end %>
       </div>
     </div>
