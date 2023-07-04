@@ -39,6 +39,8 @@ ja:
       title: '削除'
     likes:
       title: 'お気に入り一覧'
+    comment:
+      title: 'コメント'
   profiles:
     show:
       title: 'プロフィール'

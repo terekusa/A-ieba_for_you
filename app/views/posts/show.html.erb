@@ -4,6 +4,22 @@
     <div class="d-flex flex-column flex-md-row align-items-center p-1 px-md-4 mb-1">
       <%= @post.user.name %>さんの投稿
       <nav class="my-2 my-md-0 ms-auto">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
+          コメント
+        </button>
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLongTitle" style="display: none;" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLongTitle">モーダルのタイトル</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
+              </div>
+              <div class="modal-body" style="min-height: 1500px">
+                <%= render "modal_comment_form", comment: @comment %>
+              </div>
+            </div>
+          </div>
+        </div>
         <%= link_to t('posts.edit.title'), '#', class: "p-2 text-dark" %>
         <%= link_to t('posts.destroy.title'), '#', class: "p-2 text-dark" %>
       </nav>
