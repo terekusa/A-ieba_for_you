@@ -43,9 +43,15 @@ ja:
     destroy:
       title: '削除'
     likes:
-      title: 'お気に入り一覧'
+      title: 'Like一覧'
+      no_result: 'Like中の投稿がありません'
     comment:
       title: 'コメント'
+  likes:
+    create:
+      success: 'Likeしました'
+    destroy:
+      success: 'Likeを外しました'
   profiles:
     show:
       title: 'プロフィール'
