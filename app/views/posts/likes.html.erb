@@ -20,7 +20,7 @@
         <% if @like_posts.present? %>
           <%= render @like_posts %>
         <% else %>
-          <p>投稿はありません</p>
+          <p><%= t('.no_result') %></p>
         <% end %>
       </div>
     </div>
