@@ -20,8 +20,10 @@
             </div>
           </div>
         </div>
-        <%= link_to t('posts.edit.title'), '#', class: "p-2 text-dark" %>
-        <%= link_to t('posts.destroy.title'), '#', class: "p-2 text-dark" %>
+        <% if current_user.own?(@post) %>
+          <%= link_to t('posts.edit.title'), edit_post_path(@post), class: "p-2 text-dark" %>
+          <%= link_to t('posts.destroy.title'), post_path(@post), data: { "turbo-method": :delete, turbo_confirm: t('defaults.message.delete_confirm') }, class: "p-2 text-dark" %>
+        <% end %>
       </nav>
     </div>
   </div>
