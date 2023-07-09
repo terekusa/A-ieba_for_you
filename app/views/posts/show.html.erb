@@ -14,7 +14,7 @@
                 <h1 class="modal-title fs-5" id="exampleModalLongTitle">モーダルのタイトル</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
               </div>
-              <div class="modal-body" style="min-height: 1500px">
+              <div class="modal-body" style="max-height: 1500px; overflow-y: auto;">
                 <%= render "modal_comment_form", comment: @comment %>
               </div>
             </div>
