@@ -3,6 +3,7 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
+    post: '投稿'
     gest_login: 'ゲストログイン'
     message:
       require_login: 'ログインしてください'
@@ -31,12 +32,16 @@ ja:
       no_result: '投稿がありません'
     new:
       title: '新規作成'
+    show:
+      title: '投稿詳細'
     edit:
       title: '編集'
     destroy:
       title: '削除'
     likes:
       title: 'お気に入り一覧'
+    comment:
+      title: 'コメント'
   profiles:
     show:
       title: 'プロフィール'

@@ -3,6 +3,7 @@ ja:
     models:
       user: 'ユーザー'
       post: '投稿'
+      comment: 'コメント'
     attributes:
       user:
         email: 'メールアドレス'
@@ -13,4 +14,6 @@ ja:
         word: '言えなかった言葉'
         partners_word: '相手の言葉・シチュエーション'
         episode: 'エピソード'
+      comment:
+        body: 'コメント'
         
