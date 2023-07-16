@@ -26,6 +26,11 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :like_users, through: :likes, source: :user
 
+  #has_many :post_details, dependent: :destroy
+  #has_many :genres, through: :post_details, source: :detailable, source_type: 'Genre'
+  #has_many :partners, through: :post_details, source: :detailable, source_type: 'Partner'
+  #has_many :situations, through: :post_details, source: :detailable, source_type: 'Situation'
+
   validates :word, presence: true, length: { maximum: 65_535 }
   validates :episode, length: { maximum: 65_535 }
   validates :partners_word, presence: true, length: { maximum: 65_535 }

@@ -4,6 +4,9 @@ class PostsController < ApplicationController
   end
 
   def new
+    @genres = PostDetail.where(detailable_type: "Genre")
+    @partners = PostDetail.where(detailable_type: "Partner")
+    @situations = PostDetail.where(detailable_type: "Situation")
     @post = Post.new
   end
 
