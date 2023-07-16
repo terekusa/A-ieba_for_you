@@ -10,5 +10,4 @@
 #  detailable_id   :string
 #
 class Genre < PostDetail
-  belongs_to :post
 end

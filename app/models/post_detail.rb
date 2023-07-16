@@ -10,6 +10,5 @@
 #  detailable_id   :string
 #
 class PostDetail < ApplicationRecord
-  #belongs_to :post
-  #belongs_to :detailable, polymorphic: true
+  belongs_to :post
 end

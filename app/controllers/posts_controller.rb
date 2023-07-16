@@ -22,6 +22,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @genre = @post.genre
+    #@partner = Partner.find(@post.partner_id)
+    #@situation = Situation.find(@post.situation_id)
     @comment= Comment.new
     @comments = @post.comments.includes(:user).order(created_at: :desc)
   end
@@ -53,6 +56,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:word, :image, :episode, :partners_word)
+    params.require(:post).permit(:word, :image, :episode, :partners_word, :genre_id, :partner_id, :situation_id)
   end
 end
