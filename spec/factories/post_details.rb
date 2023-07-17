@@ -2,12 +2,11 @@
 #
 # Table name: post_details
 #
-#  id              :bigint           not null, primary key
-#  detailable_type :string
-#  name            :string
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#  detailable_id   :string
+#  id         :bigint           not null, primary key
+#  name       :string
+#  type       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 FactoryBot.define do
   factory :post_detail do

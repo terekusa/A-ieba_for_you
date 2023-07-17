@@ -4,9 +4,9 @@ class PostsController < ApplicationController
   end
 
   def new
-    @genres = PostDetail.where(detailable_type: "Genre")
-    @partners = PostDetail.where(detailable_type: "Partner")
-    @situations = PostDetail.where(detailable_type: "Situation")
+    @genres = Genre.all
+    @partners = Partner.all
+    @situations = Situation.all
     @post = Post.new
   end
 
@@ -22,9 +22,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @genre = @post.genre
-    #@partner = Partner.find(@post.partner_id)
-    #@situation = Situation.find(@post.situation_id)
+    @genre = @post.genre.name
+    @partner = @post.partner.name
+    @situation = @post.situation.name
     @comment= Comment.new
     @comments = @post.comments.includes(:user).order(created_at: :desc)
   end
@@ -56,6 +56,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:word, :image, :episode, :partners_word, :genre_id, :partner_id, :situation_id)
+    params.require(:post).permit(:word, :image, :episode, :partners_word, :genre_id, :partner_id, :situation_id, :name)
   end
 end

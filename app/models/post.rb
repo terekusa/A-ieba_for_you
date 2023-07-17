@@ -21,15 +21,18 @@
 #
 class Post < ApplicationRecord
   belongs_to :user
+  belongs_to :genre
+  belongs_to :partner
+  belongs_to :situation
   has_many :comments, dependent: :destroy
 
   has_many :likes, dependent: :destroy
   has_many :like_users, through: :likes, source: :user
 
-  has_many :post_details, dependent: :destroy
-  has_many :genres, dependent: :destroy
-  has_many :partners, dependent: :destroy
-  has_many :situations, dependent: :destroy
+  #has_many :post_details, dependent: :destroy
+  #has_many :genres, dependent: :destroy
+  #has_many :partners, dependent: :destroy
+  #has_many :situations, dependent: :destroy
 
   validates :word, presence: true, length: { maximum: 65_535 }
   validates :episode, length: { maximum: 65_535 }

@@ -9,6 +9,7 @@
           <h2 class="card-text d-flex align-items-center justify-content-center my-4 balloon-post">
             <%= post.word %>
           </h2>
+          <%= post.genre.name %>
           <% if current_user.own?(post) %>
             <%= render 'crud_menus', post: post %>
           <% else %>
