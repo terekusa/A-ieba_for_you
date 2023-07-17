@@ -34,7 +34,7 @@ class Post < ApplicationRecord
   #has_many :partners, dependent: :destroy
   #has_many :situations, dependent: :destroy
 
-  validates :word, presence: true, length: { maximum: 65_535 }
+  validates :word, presence: true, length: { maximum: 255 }
   validates :episode, length: { maximum: 65_535 }
-  validates :partners_word, presence: true, length: { maximum: 65_535 }
+  validates :partners_word, presence: true, length: { maximum: 255 }
 end
