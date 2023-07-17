@@ -9,11 +9,17 @@
 #  word          :text             not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  genre_id      :bigint
+#  partner_id    :bigint
+#  situation_id  :bigint
 #  user_id       :bigint           not null
 #
 # Indexes
 #
-#  index_posts_on_user_id  (user_id)
+#  index_posts_on_genre_id      (genre_id)
+#  index_posts_on_partner_id    (partner_id)
+#  index_posts_on_situation_id  (situation_id)
+#  index_posts_on_user_id       (user_id)
 #
 # Foreign Keys
 #
