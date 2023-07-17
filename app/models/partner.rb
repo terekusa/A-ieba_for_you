@@ -9,5 +9,9 @@
 #  updated_at :datetime         not null
 #
 class Partner < PostDetail
-  has_many :post
+  has_many :posts
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["id", "type", "name"]
+  end
 end

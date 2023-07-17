@@ -1,0 +1,11 @@
+<%= search_form_for @q, url: url do |f| %>
+  <div class="input-group mb-3">
+    <%= f.search_field :word_or_partners_word_or_episode_cont, class: 'form-control', placeholder: t('defaults.search_word') %>
+    <%= f.select :partner_id_eq, options_from_collection_for_select(Partner.all, :id, :name, @q.partner_id_eq), { include_blank: '-会話の相手-' } %>
+    <%= f.select :genre_id_eq, options_from_collection_for_select(Genre.all, :id, :name, @q.genre_id_eq), { include_blank: '-ジャンル-' } %>
+    <%= f.select :situation_id_eq, options_from_collection_for_select(Situation.all, :id, :name, @q.situation_id_eq), { include_blank: '-シチュエーション-' } %>
+    <div class="input-group-append">
+      <%= f.submit class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>
