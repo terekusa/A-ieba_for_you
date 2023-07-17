@@ -37,4 +37,13 @@ class Post < ApplicationRecord
   validates :word, presence: true, length: { maximum: 255 }
   validates :episode, length: { maximum: 65_535 }
   validates :partners_word, presence: true, length: { maximum: 255 }
+
+  def self.ransackable_associations(auth_object = nil)
+    ["genre", "partner", "situation"]
+  end
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["word", "partners_word", "episode"]
+  end
+
 end

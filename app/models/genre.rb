@@ -10,4 +10,8 @@
 #
 class Genre < PostDetail
   has_many :posts
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["id", "type", "name"]
+  end
 end
