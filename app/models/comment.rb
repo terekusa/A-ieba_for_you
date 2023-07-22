@@ -23,5 +23,23 @@ class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :post
 
+  has_one :notification, as: :notifiable, dependent: :destroy
+
   validates :body, presence: true, length: { maximum: 65_535 }
+
+  after_create_commit :create_notifications
+
+  private
+  
+  def create_notifications
+    Notification.create(notifiable: self, user_id: post.user.id, action_type: Notification.action_types[:commented_to_own_post])
+  end
+
+  def redirect_path
+    "/#{post.user.id}/posts/#{post.id}"
+  end
+
+  def name
+    user.name
+  end
 end

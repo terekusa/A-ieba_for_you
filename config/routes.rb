@@ -17,4 +17,7 @@ Rails.application.routes.draw do
     end
   end
   resources :likes, only: %i[create destroy]
+  resources :notifications, only: %i[index] do
+    patch :read, on: :member
+  end
 end
