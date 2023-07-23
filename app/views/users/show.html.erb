@@ -1,0 +1,57 @@
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button
+      class="nav-link active"
+      id="nav-home-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#nav-home"
+      type="button"
+      role="tab"
+      aria-controls="nav-home"
+      aria-selected="true">
+      <%= "#{@user.name} さんの投稿" %>
+    </button>
+    <button
+      class="nav-link"
+      id="nav-profile-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#nav-profile"
+      type="button"
+      role="tab"
+      aria-controls="nav-profile"
+      aria-selected="false">
+      <%= "#{@user.name} さんのLIKE一覧" %>
+    </button>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div
+    class="tab-pane fade show active"
+    id="nav-home"
+    role="tabpanel"
+    aria-labelledby="nav-home-tab">
+    <%= link_to t('defaults.edit'), edit_profile_path %>
+    <div class="row row-cols-2 row-cols-md-2 g-2">
+      <% if @posts.present? %>
+        <%= render @posts %>
+      <% else %>
+        <p><%= t('.no_result') %></p>
+      <% end %>
+      <%= paginate @posts %>
+    </div>
+  </div>
+  <div
+    class="tab-pane fade"
+    id="nav-profile"
+    role="tabpanel"
+    aria-labelledby="nav-profile-tab">
+    <div class="row">
+      <% if @like_posts.present? %>
+        <%= render @like_posts %>
+      <% else %>
+        <p><%= t('.no_result') %></p>
+      <% end %>
+      <%= paginate @posts %>
+    </div>
+  </div>
+</div>

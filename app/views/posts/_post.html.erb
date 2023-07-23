@@ -13,9 +13,9 @@
           <%= post.genre.name %>
           <%= post.situation.name %>
           <% if current_user.own?(post) %>
-            <%= render 'crud_menus', post: post %>
+            <%= render 'posts/crud_menus', post: post %>
           <% else %>
-            <%= render 'like_button', post: post  %>
+            <%= render 'posts/like_button', post: post  %>
           <% end %>
         <% end %>
       </div>
