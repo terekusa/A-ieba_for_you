@@ -1,0 +1,9 @@
+<%= link_to transition_path(notification) do %>
+  <div>
+    <%= notification.notifiable.user.name %>
+    があなたの
+    <%= link_to '投稿', post_path(notification.notifiable.post) %>
+    にいいねしました
+    <%= " (#{time_ago_in_words(notification.created_at)}前)" %>
+  </div>
+<% end %>

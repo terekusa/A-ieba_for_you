@@ -15,6 +15,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+    @posts = @user.posts.order(created_at: :desc).page(params[:page])
+  end
+
   private
 
   def user_params

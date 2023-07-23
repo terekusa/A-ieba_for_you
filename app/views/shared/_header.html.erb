@@ -5,6 +5,11 @@
       <%= link_to t('posts.index.title'), posts_path, class: "p-2 text-dark" %>
       <%= link_to t('posts.likes.title'), likes_posts_path, class: "p-2 text-dark" %>
       <%= link_to t('posts.new.title'), new_post_path, class: "p-2 text-dark" %>
+      <%= link_to "マイページ", user_path(current_user.id), class: "p-2 text-dark" %>
+      <%= link_to notifications_path, class: "nav-link" do %>
+        <i class="fa-sharp fa-solid fa-bell"></i>
+        通知一覧
+      <% end %>
     </nav>
     <%= link_to (t 'defaults.logout'), logout_path, data: { "turbo-method": :delete }, class: "btn btn-outline-primary" %>
   </div>
