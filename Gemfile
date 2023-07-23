@@ -55,6 +55,7 @@ gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 6.4.0'
 gem 'kaminari'
 gem 'ransack'
+gem 'config'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -68,6 +69,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem "annotate"
   gem "pry-byebug"
+  gem 'letter_opener_web'
 end
 
 group :development do

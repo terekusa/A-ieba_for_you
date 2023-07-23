@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @posts = @user.posts.order(created_at: :desc).page(params[:page])
+    @like_posts = current_user.like_posts.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   private
