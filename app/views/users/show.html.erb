@@ -45,13 +45,14 @@
     id="nav-profile"
     role="tabpanel"
     aria-labelledby="nav-profile-tab">
-    <div class="row">
+    <div class="row row-cols-2 row-cols-md-2 g-2">
       <% if @like_posts.present? %>
         <%= render @like_posts %>
       <% else %>
         <p><%= t('.no_result') %></p>
       <% end %>
-      <%= paginate @posts %>
+    </div>
+    <%= paginate @like_posts %>
     </div>
   </div>
 </div>
