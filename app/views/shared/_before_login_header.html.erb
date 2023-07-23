@@ -1,5 +1,5 @@
 <header>
   <%= link_to 'top_page', root_path %>
   <%= link_to (t 'defaults.login'), login_path %>
-  <%= link_to (t 'defaults.gest_login'), '#' %>
+  <%= link_to 'ゲストログイン', '/guest_login', data: { "turbo-method": :post } %>
 </header>
