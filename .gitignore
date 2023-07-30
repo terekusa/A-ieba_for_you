@@ -3,6 +3,9 @@ config/settings.local.yml
 config/settings/*.local.yml
 config/environments/*.local.yml
 
+<<<<<<< HEAD
 vendor/
 /config/database.yml
+=======
+>>>>>>> parent of a7a239b ([add] .gitignore)
 /public/uploads
