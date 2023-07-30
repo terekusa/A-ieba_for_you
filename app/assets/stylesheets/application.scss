@@ -1,6 +1,11 @@
 @import "bootstrap";
 @import "font-awesome";
 
+.link {
+  text-decoration: none;
+  color: #446878 ; 
+}
+
 .page-content {
   background-color: #fef4e8;
   height: calc(100vh - 134px);
@@ -20,6 +25,12 @@
 
 .post-content{
   background-color: #D9D0C5;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+
+.search-content{
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: #446878;
 }
 
 /*_post.html.erb画面の吹き出し*/

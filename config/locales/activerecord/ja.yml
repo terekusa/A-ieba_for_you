@@ -11,9 +11,13 @@ ja:
         password_confirmation: 'パスワード確認'
         name: '名前'
       post:
-        word: '言えなかった言葉'
-        partners_word: '相手の言葉・シチュエーション'
+        word: 'あなたが言えなかった言葉'
+        partners_word: '相手の言葉'
         episode: 'エピソード'
+        partner: '会話の相手'
+        genre: 'ジャンル'
+        situation: 'シチュエーション'
+        image: 'サムネイル'
       comment:
         body: 'コメント'
         

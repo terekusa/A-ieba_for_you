@@ -4,12 +4,12 @@
       <%= image_tag 'header-logo.png', size: '70x70', class: "ms-5" %>
     </a>
     <nav class="my-2 my-md-0 ms-auto">
-      <%= link_to t('posts.index.title'), posts_path, class: "p-2 text-dark" %>
-      <%= link_to t('posts.new.title'), new_post_path, class: "p-2 text-dark" %>
-      <%= link_to "マイページ", user_path(current_user.id), class: "p-2 text-dark" %>
-      <%= link_to "通知", notifications_path, class: "p-2 text-dark" %>
+      <%= link_to t('posts.index.title'), posts_path, class: "p-2 link" %>
+      <%= link_to t('posts.new.title'), new_post_path, class: "p-2 link" %>
+      <%= link_to "マイページ", user_path(current_user.id), class: "p-2 link" %>
+      <%= link_to "通知", notifications_path, class: "p-2 link" %>
     </nav>
-    <%= link_to (t 'defaults.logout'), logout_path, data: { "turbo-method": :delete }, class: "p-2 text-dark" %>
+    <%= link_to (t 'defaults.logout'), logout_path, data: { "turbo-method": :delete }, class: "p-2 link" %>
   </div>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
