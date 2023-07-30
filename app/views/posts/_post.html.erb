@@ -1,5 +1,5 @@
 <div class="card-deck">
-  <div class="card mb-2 h-100">
+  <div class="card mb-2 h-100 post-content">
     <div class="row g-0">
       <div class="col-md-4 p-md-2">
         <%= image_tag 'sample.jpg', class: "img-fluid rounded mt-3" %>
@@ -9,15 +9,19 @@
           <h2 class="card-text d-flex align-items-center justify-content-center my-4 balloon-post">
             <%= post.word %>
           </h2>
-          <%= post.partner.name %>
-          <%= post.genre.name %>
-          <%= post.situation.name %>
+        <% end %>
+        <div class="text-center" >
+          # <%= post.partner.name %>&emsp;
+          # <%= post.genre.name %>&emsp;
+          # <%= post.situation.name %>
+        </div>
+        <div class="text-right">
           <% if current_user.own?(post) %>
             <%= render 'posts/crud_menus', post: post %>
           <% else %>
             <%= render 'posts/like_button', post: post  %>
           <% end %>
-        <% end %>
+        </div>
       </div>
     </div>
   </div>
