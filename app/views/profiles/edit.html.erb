@@ -1,7 +1,7 @@
 <% content_for(:title, t('.title')) %>
 <div class="container">
   <div class="row">
-    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 post-content">
       <h1><%= t '.title' %></h1>
       <%= form_with model: @user, url: profile_path, local: true do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
@@ -13,7 +13,7 @@
           <%= f.label :email %>
           <%= f.email_field :email, class: 'form-control' %>
         </div>
-        <%= f.submit (t 'defaults.register'), class: 'btn btn-primary' %>
+        <%= f.submit (t 'defaults.register'), class: 'btn btn-light my-2' %>
       <% end %>
     </div>
   </div>
