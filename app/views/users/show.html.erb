@@ -1,7 +1,7 @@
 <nav>
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <button
-      class="nav-link active"
+      class="nav-link active link"
       id="nav-home-tab"
       data-bs-toggle="tab"
       data-bs-target="#nav-home"
@@ -12,7 +12,7 @@
       <%= "#{@user.name} さんの投稿" %>
     </button>
     <button
-      class="nav-link"
+      class="nav-link link"
       id="nav-profile-tab"
       data-bs-toggle="tab"
       data-bs-target="#nav-profile"
@@ -30,7 +30,6 @@
     id="nav-home"
     role="tabpanel"
     aria-labelledby="nav-home-tab">
-    <%= link_to t('defaults.edit'), edit_profile_path %>
     <div class="row row-cols-2 row-cols-md-2 g-2">
       <% if @posts.present? %>
         <%= render @posts %>

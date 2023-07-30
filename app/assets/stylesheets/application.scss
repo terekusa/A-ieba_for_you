@@ -6,6 +6,28 @@
   color: #446878 ; 
 }
 
+select {
+  color:#446878;
+  border: 0.5px solid #446878;
+}
+
+input {
+  background-color: #fef4e8;
+  border: 0.5px solid #446878;
+}
+
+::placeholder {
+  color: #446878;
+}
+
+ul{
+  padding-left:0;
+}
+
+li{
+  list-style:none;
+}
+
 .page-content {
   background-color: #fef4e8;
   height: calc(100vh - 134px);
@@ -26,11 +48,22 @@
 .post-content{
   background-color: #D9D0C5;
   font-family: 'Zen Kurenaido', sans-serif;
+  color: #446878;
 }
 
 .search-content{
   font-family: 'Zen Kurenaido', sans-serif;
   color: #446878;
+}
+
+.episode-content{
+  background-color: #FFF;
+  border: solid 3px #446878;
+  min-height: 150px
+}
+
+.nav-tabs .nav-link.active{
+  background-color: #D9D0C5;
 }
 
 /*_post.html.erb画面の吹き出し*/
@@ -41,10 +74,10 @@
   min-width: 120px;
   max-width: 100%;
   min-height: 100px;
-  color: #555;
+  color: #446878;
   font-size: 30px;
   background: #FFF;
-  border: solid 3px #555;
+  border: solid 3px #446878;
   box-sizing: border-box;
   border-radius: 15px;
 }
@@ -85,10 +118,10 @@
   min-width: 120px;
   max-width: 100%;
   min-height: 200px;
-  color: #555;
+  color: #446878;
   font-size: 30px;
   background: #FFF;
-  border: solid 3px #555;
+  border: solid 3px #446878;
   box-sizing: border-box;
   border-radius: 15px;
 }
@@ -111,7 +144,7 @@
   left: -30px;
   margin-top: -14px;
   border: 14px solid transparent;
-  border-right: 14px solid #555;
+  border-right: 14px solid #446878;
   z-index: 1;
 }
 
@@ -128,10 +161,10 @@
   min-width: 120px;
   max-width: 100%;
   min-height: 200px;
-  color: #555;
+  color: #446878;
   font-size: 30px;
   background: #FFF;
-  border: solid 3px #555;
+  border: solid 3px #446878;
   box-sizing: border-box;
   border-radius: 15px;
 }
@@ -154,7 +187,7 @@
   left: -30px;
   margin-top: -14px;
   border: 14px solid transparent;
-  border-right: 14px solid #555;
+  border-right: 14px solid #446878;
   z-index: 1;
 }
 

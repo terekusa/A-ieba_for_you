@@ -19,7 +19,7 @@
       <ul class="list-inline justify-content-center" style="float: right;">
         <li class="list-inline-item">
           <a href="#" class='js-edit-comment-button' data-comment-id="<%= comment.id %>">
-            <%= icon 'fa', 'pen' %>
+            <i class="fa-regular fa-pen-to-square fa-lg" style="color: #446878;"></i>
           </a>
         </li>
         <li class="list-inline-item">
@@ -27,7 +27,7 @@
                       class: 'js-delete-comment-button',
                       data: { "turbo-method": :delete, turbo_confirm: t('defaults.message.delete_confirm') },
                       remote: true  do %>
-            <%= icon 'fa', 'trash' %>
+            <i class="fa-solid fa-trash-can fa-lg" style="color: #446878;"></i>
           <% end %>
         </li>
       </ul>
