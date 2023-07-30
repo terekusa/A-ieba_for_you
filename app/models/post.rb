@@ -26,6 +26,8 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Post < ApplicationRecord
+  mount_uploader :image, PostImageUploader
+
   belongs_to :user
   belongs_to :genre
   belongs_to :partner

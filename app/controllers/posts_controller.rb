@@ -1,13 +1,12 @@
 class PostsController < ApplicationController
+  before_action :set_post_details, only: %i[new create edit update]
+
   def index
     @q = Post.ransack(params[:q])
     @posts = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def new
-    @genres = Genre.all
-    @partners = Partner.all
-    @situations = Situation.all
     @post = Post.new
   end
 
@@ -57,7 +56,13 @@ class PostsController < ApplicationController
 
   private
 
+  def set_post_details
+    @genres = Genre.all
+    @partners = Partner.all
+    @situations = Situation.all
+  end
+
   def post_params
-    params.require(:post).permit(:word, :image, :episode, :partners_word, :genre_id, :partner_id, :situation_id, :name)
+    params.require(:post).permit(:word, :image, :episode, :partners_word, :genre_id, :partner_id, :situation_id, :name, :image_cache)
   end
 end

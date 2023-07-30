@@ -2,10 +2,10 @@
   <div class="card mb-2 h-100 post-content">
     <div class="row g-0">
       <div class="col-md-4 p-md-2">
-        <%= image_tag 'sample.jpg', class: "img-fluid rounded mt-3" %>
+        <%= image_tag post.image_url, class: "img-fluid rounded m-4", size: "200x200" %>
       </div>
       <div class="col-md-8">
-        <%= link_to post, class: "card-body" do %>
+        <%= link_to post, class: "card-body", style: "text-decoration:none" do %>
           <h2 class="card-text d-flex align-items-center justify-content-center my-4 balloon-post">
             <%= post.word %>
           </h2>
@@ -15,7 +15,7 @@
           # <%= post.genre.name %>&emsp;
           # <%= post.situation.name %>
         </div>
-        <div class="text-right">
+        <div class="me-4", align="right">
           <% if current_user.own?(post) %>
             <%= render 'posts/crud_menus', post: post %>
           <% else %>
