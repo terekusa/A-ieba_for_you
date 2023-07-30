@@ -1,6 +1,27 @@
 @import "bootstrap";
 @import "font-awesome";
 
+.page-content {
+  background-color: #fef4e8;
+  height: calc(100vh - 134px);
+  position: relative;
+}
+
+.top-word {
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: #446878;
+}
+
+.header-content {
+  background-color: #AAB3A2;
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: #446878;
+}
+
+.post-content{
+  background-color: #D9D0C5;
+}
+
 /*_post.html.erb画面の吹き出し*/
 .balloon-post {
   position: relative;

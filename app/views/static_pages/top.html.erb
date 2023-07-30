@@ -1,2 +1,36 @@
-<h1>アアイエバ For You</h1>
-
+<div class="container-fluid">
+  <div class="container">
+    <%= image_tag 'logo.png', class: "img-fluid rounded mx-auto d-block", size: '500x500' %>
+    <div>
+      <h2 class="top-word text-center pb-5">
+        あなたが言えなかった言葉を、誰かの言葉に
+      </h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <%= image_tag 'top-left.png', class: "img-fluid rounded mx-auto d-block float-left", size: '200x200' %>
+        <p class="text-center top-word">
+          「あの時、ああ言えば良かった」
+          <br>
+          友人や家族、上司や同僚との日々の会話で、このような経験はありませんか。
+          <br>
+          あなたが言えなかったその言葉は、誰かが必要としている言葉かもしれません。
+          <br>
+          <%= link_to "→ あなたが言えなかった言葉を投稿してみる。", new_post_path %>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <%= image_tag 'top-right.png', class: "img-fluid rounded mx-auto d-block", size: '200x200' %>
+        <p class="text-center top-word">
+          「こんな時、なんて言えばいいんだろう」
+          <br>
+          初めての出来事、突然のシチュエーションで、このような経験はありませんか。
+          <br>
+          もしかしたら誰かが同じ出来事に遭遇しているかもしれません。
+          <br>
+          <%= link_to "→ 誰かの言葉を検索してみる。", posts_path %>
+        </p>
+    </div>
+    </div>
+  </div>
+</div>
