@@ -1,7 +1,7 @@
 <%= link_to likes_path(post_id: post.id),
             id: "js-like-button-for-post-#{post.id}",
-            class: "float-right",
+            class: "float-right link",
             data: { "turbo-method": :post },
             remote: true do %>
-  <i class="fa-regular fa-heart fa-lg" style="color: #446878;"></i>
+  <i class="fa-regular fa-heart fa-lg" style="color: #446878;"></i> <%= post.likes.count %>
 <% end %>
