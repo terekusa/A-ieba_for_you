@@ -27,6 +27,9 @@
           <%= link_to post_path(@post), data: { "turbo-method": :delete, turbo_confirm: t('defaults.message.delete_confirm') }, class: "p-2 link" do %>
             <i class="fa-solid fa-trash-can fa-lg" style="color: #446878;"></i>
           <% end %>
+          <i class="fa-solid fa-heart fa-lg ms-2" style="color: #446878;"></i> <%= @post.likes.count %>
+        <% else %>
+          <%= render 'posts/like_button', post: @post  %>
         <% end %>
       </nav>
     </div>
