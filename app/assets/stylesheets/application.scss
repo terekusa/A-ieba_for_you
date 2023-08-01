@@ -28,6 +28,19 @@ li{
   list-style:none;
 }
 
+.pagination>li>a {          
+  border: none;     /*枠線をなくす*/
+  color: #446878;   /*文字の色を変える*/
+}
+
+.pagination>.active>a {     
+  background: #446878;     /*背景の色を変える*/
+}
+
+.pagination {
+  justify-content: center;
+}
+
 .page-content {
   background-color: #fef4e8;
   height: calc(100vh - 134px);
