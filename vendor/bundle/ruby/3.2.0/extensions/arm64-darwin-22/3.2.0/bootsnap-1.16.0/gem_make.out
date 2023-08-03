@@ -1,0 +1,18 @@
+current directory: /Users/tk/workspace/portfolio/A-ieba_for_you/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+/Users/tk/.anyenv/envs/rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/tk/workspace/portfolio/A-ieba_for_you/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230730-41641-8k6st1 sitelibdir\=./.gem.20230730-41641-8k6st1 clean
+
+current directory: /Users/tk/workspace/portfolio/A-ieba_for_you/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230730-41641-8k6st1 sitelibdir\=./.gem.20230730-41641-8k6st1
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/tk/workspace/portfolio/A-ieba_for_you/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230730-41641-8k6st1 sitelibdir\=./.gem.20230730-41641-8k6st1 install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20230730-41641-8k6st1/bootsnap
+
+current directory: /Users/tk/workspace/portfolio/A-ieba_for_you/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230730-41641-8k6st1 sitelibdir\=./.gem.20230730-41641-8k6st1 clean
