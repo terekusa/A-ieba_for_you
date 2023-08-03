@@ -33,11 +33,6 @@
         <%= f.file_field :image, class: 'form-control mb-3', accept: 'image/*' %>
         <%= f.hidden_field :image_cache %>
       </div>
-      <div class='mt-3 mb-3'>
-        <%= image_tag post.image.url,
-                      id: 'preview',
-                      size: '300x200' %>
-      </div>
 
       <%= f.submit class: 'btn btn-light mb-3' %>
     </div>
