@@ -81,6 +81,11 @@ color:#446878
   min-height: 150px;
 }
 
+.comment-content{
+  height: 530px;
+  overflow: auto;
+}
+
 .nav-tabs .nav-link.active{
   background-color: #D9D0C5;
 }

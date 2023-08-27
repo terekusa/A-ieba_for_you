@@ -1,60 +1,64 @@
 <% content_for(:title, t('.title')) %>
-<div class="card mb-2 post-content">
-  <div class="card-header">
-    <div class="d-flex flex-column flex-md-row align-items-center p-1 px-md-4 mb-1">
-      <%= @post.user.name %>さんの投稿
-      <nav class="my-2 my-md-0 ms-auto">
-        <button type="button" class="btn btn-link link" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
-          コメント
-        </button>
-        <div class="modal fade" id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLongTitle" style="display: none;" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLongTitle">コメント一覧</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="閉じる"></button>
-              </div>
-              <div class="modal-body" style="max-height: 1500px; overflow-y: auto;">
-                <%= render "modal_comment_form", comment: @comment %>
-              </div>
-            </div>
-          </div>
+<div class="row g-0">
+  <div class="col-lg-8">
+    <div class="card mb-2 h-100 post-content">
+      <div class="card-header">
+        <div class="d-flex flex-column flex-md-row align-items-center p-1 px-md-4 mb-1">
+          <%= @post.user.name %>さんの投稿
+          <nav class="my-2 my-md-0 ms-auto">
+            <% if current_user.own?(@post) %>
+              <%= link_to edit_post_path(@post), class: "p-2 link" do %>
+                <i class="fa-regular fa-pen-to-square fa-lg" style="color: #446878;"></i>
+              <% end %>
+              <%= link_to post_path(@post), data: { "turbo-method": :delete, turbo_confirm: t('defaults.message.delete_confirm') }, class: "p-2 link" do %>
+                <i class="fa-solid fa-trash-can fa-lg" style="color: #446878;"></i>
+              <% end %>
+              <i class="fa-solid fa-heart fa-lg ms-2" style="color: #446878;"></i> <%= @post.likes.count %>
+            <% else %>
+              <%= render 'posts/like_button', post: @post  %>
+            <% end %>
+          </nav>
         </div>
-        <% if current_user.own?(@post) %>
-          <%= link_to edit_post_path(@post), class: "p-2 link" do %>
-            <i class="fa-regular fa-pen-to-square fa-lg" style="color: #446878;"></i>
-          <% end %>
-          <%= link_to post_path(@post), data: { "turbo-method": :delete, turbo_confirm: t('defaults.message.delete_confirm') }, class: "p-2 link" do %>
-            <i class="fa-solid fa-trash-can fa-lg" style="color: #446878;"></i>
-          <% end %>
-          <i class="fa-solid fa-heart fa-lg ms-2" style="color: #446878;"></i> <%= @post.likes.count %>
-        <% else %>
-          <%= render 'posts/like_button', post: @post  %>
-        <% end %>
-      </nav>
+      </div>
+      <div class="row g-0">
+        <div class="col-lg-3 p-md-2">
+          <%= image_tag 'post-default.jpg', class: "img-fluid rounded m-4", size: '200x200' %>
+        </div>
+        <div class="col-lg-9">
+          <h2 class="card-text d-flex align-items-center justify-content-center my-4 balloon-show-left">
+            <%= @post.partners_word %>
+          </h2>
+        </div>
+        <div class="col-lg-3 p-md-2">
+          <%= image_tag @post.image_url, class: "img-fluid rounded m-4", size: "200x200" %>
+        </div>
+        <div class="col-lg-9">
+          <h2 class="card-text d-flex align-items-center justify-content-center my-4 balloon-show-right">
+            <%= @post.word %>
+          </h2>
+        </div>
+      </div>
+      <div class="card-footer episode-content m-2">
+        <h2 class="card-text d-flex align-items-center justify-content-center my-4">
+          <%= @post.episode %>
+        </h2>
+      </div>
     </div>
   </div>
-  <div class="row g-0">
-    <div class="col-md-4 p-md-2">
-      <%= image_tag 'post-default.jpg', class: "img-fluid rounded m-4", size: '200x200' %>
+
+  <div class="col-lg-4 ps-2">
+    <div class="card mb-2 h-100 post-content">
+      <div class="card-header">
+        <div class="d-flex flex-column flex-md-row align-items-center p-1 px-md-4 mb-1">
+          コメント一覧
+        </div>
+      </div>
+      <div class="row g-0 pt-2 comment-content">
+        <%= render 'comments/comments', { comments: @comments } %>
+      </div>
+      <div class="row g-0 pt-2">
+        <%= render 'comments/form', { post: @post, comment: @comment } %>
+      </div>
     </div>
-    <div class="col-md-8">
-      <h2 class="card-text d-flex align-items-center justify-content-center my-4 balloon-show-left">
-        <%= @post.partners_word %>
-      </h2>
-    </div>
-    <div class="col-md-4 p-md-2">
-      <%= image_tag @post.image_url, class: "img-fluid rounded m-4", size: "200x200" %>
-    </div>
-    <div class="col-md-8">
-      <h2 class="card-text d-flex align-items-center justify-content-center my-4 balloon-show-right">
-        <%= @post.word %>
-      </h2>
-    </div>
-  </div>
-  <div class="card-footer episode-content m-2">
-    <h2 class="card-text d-flex align-items-center justify-content-center my-4">
-      <%= @post.episode %>
-    </h2>
   </div>
 </div>
