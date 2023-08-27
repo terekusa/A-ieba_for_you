@@ -65,6 +65,7 @@ color:#446878
 }
 
 .post-content{
+  min-width: 600px;
   background-color: #D9D0C5;
   font-family: 'Zen Kurenaido', sans-serif;
   color: #446878;
@@ -81,7 +82,20 @@ color:#446878
   min-height: 150px;
 }
 
-.comment-content{
+.post-show-content{
+  min-width: 1000px;
+  background-color: #D9D0C5;
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: #446878;
+}
+
+.post-comment-content{
+  background-color: #D9D0C5;
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: #446878;
+}
+
+.comment-index-content{
   height: 530px;
   overflow: auto;
 }
