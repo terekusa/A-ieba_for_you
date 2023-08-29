@@ -3,16 +3,18 @@
   <div class="row">
     <div class="col-12">
       <%= render 'search_form', url: posts_path %>
-      <div class="row row-cols-2 row-cols-md-2 g-2">
-        <% if @posts.present? %>
-          <%= render @posts %>
-        <% else %>
-          <p><%= t('.no_result') %></p>
-        <% end %>
-      </div>
-      <div class="mt-2">
-        <%= paginate @posts %>
-      </div>
+      <%= turbo_frame_tag "cats-list" do %>
+        <div class="row row-cols-2 row-cols-md-2 g-2">
+          <% if @posts.present? %>
+            <%= render @posts %>
+          <% else %>
+            <p><%= t('.no_result') %></p>
+          <% end %>
+        </div>
+        <div class="mt-2">
+          <%= paginate @posts %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
