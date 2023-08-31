@@ -1,11 +1,8 @@
-<%= search_form_for @q, url: url, html: { data: { controller: "search", action: "input->search#submit" } } do |f| %>
+<%= search_form_for @q, url: url, html: { data: { turbo_frame: "posts-list", controller: "search", action: "input->search#submit" } } do |f| %>
   <div class="input-group mb-3 search-content">
     <%= f.search_field :word_or_partners_word_or_episode_cont, class: 'form-control me-1', placeholder: t('defaults.search_word') %>
     <%= f.select :partner_id_eq, options_from_collection_for_select(Partner.all, :id, :name, @q.partner_id_eq), { include_blank: '-会話の相手-' }, class: "mx-1" %>
     <%= f.select :genre_id_eq, options_from_collection_for_select(Genre.all, :id, :name, @q.genre_id_eq), { include_blank: '-ジャンル-' }, class: "mx-1" %>
     <%= f.select :situation_id_eq, options_from_collection_for_select(Situation.all, :id, :name, @q.situation_id_eq), { include_blank: '-シチュエーション-' }, class: "ms-1 me-2" %>
-    <div class="input-group-append">
-      <%= f.submit class: 'btn btn-light' %>
-    </div>
   </div>
 <% end %>
