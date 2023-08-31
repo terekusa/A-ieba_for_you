@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-12">
       <%= render 'search_form', url: posts_path %>
-      <%= turbo_frame_tag "cats-list" do %>
+      <%= turbo_frame_tag "posts-list" do %>
         <div class="row row-cols-2 row-cols-md-2 g-2">
           <% if @posts.present? %>
             <%= render @posts %>
