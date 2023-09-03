@@ -49,11 +49,6 @@ class PostsController < ApplicationController
     redirect_to posts_path, success: t('defaults.message.deleted', item: Post.model_name.human)
   end
 
-  def likes
-    @q = current_user.like_posts.ransack(params[:q])
-    @like_posts = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
-  end
-
   private
 
   def set_post_details
