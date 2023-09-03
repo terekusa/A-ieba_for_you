@@ -11,9 +11,9 @@
           </h2>
         <% end %>
         <div class="text-center" >
-          # <%= post.partner.name %>&emsp;
-          # <%= post.genre.name %>&emsp;
-          # <%= post.situation.name %>
+          # <%= link_to post.partner.name, posts_path(@q, :'q[partner_id_eq]' => "#{post.partner.id}"), class: "link" %>&emsp;
+          # <%= link_to post.genre.name, posts_path(@q, :'q[genre_id_eq]' => "#{post.genre.id}"), class: "link" %>&emsp;
+          # <%= link_to post.situation.name, posts_path(@q, :'q[situation_id_eq]' => "#{post.situation.id}"), class: "link" %>
         </div>
         <div class="me-4", align="right">
           <% if current_user.own?(post) %>
