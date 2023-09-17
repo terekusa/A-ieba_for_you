@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
   root 'static_pages#top'
+  get 'privacy', to: 'static_pages#privacy'
+  get 'terms', to: 'static_pages#term'
+  get 'contact', to: 'static_pages#contact'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
