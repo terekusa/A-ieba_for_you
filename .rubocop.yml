@@ -10,3 +10,10 @@ AllCops:
 
 Style/Documentation:
   Enabled: false
+
+Style/StringConcatenation:
+  Mode: conservative
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'

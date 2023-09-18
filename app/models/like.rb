@@ -30,7 +30,7 @@ class Like < ApplicationRecord
   after_create_commit :create_notifications
 
   private
-  
+
   def create_notifications
     Notification.create(notifiable: self, user_id: post.user.id, action_type: Notification.action_types[:liked_to_own_post])
   end

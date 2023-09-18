@@ -23,8 +23,7 @@
 #
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
-  
+RSpec.describe User, type: :model do  
   describe 'validation' do
     it '名前、メール、パスワードがあれば有効な状態であること' do
       user = create(:user)

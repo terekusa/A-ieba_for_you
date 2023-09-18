@@ -35,6 +35,14 @@ Layout/TrailingEmptyLines:
   Exclude:
     - 'Gemfile'
 
+Metrics/AbcSize:
+  # The ABC size is a calculated magnitude, so this number can be a Fixnum or
+  # a Float.
+  Max: 25
+
+Metrics/BlockLength:
+  Max: 30
+
 # Offense count: 1
 # Configuration parameters: AllowedMethods, AllowedPatterns.
 Metrics/CyclomaticComplexity:

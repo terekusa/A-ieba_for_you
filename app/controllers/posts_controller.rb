@@ -6,8 +6,21 @@ class PostsController < ApplicationController
     @posts = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
+  def show
+    @post = Post.find(params[:id])
+    @genre = @post.genre.name
+    @partner = @post.partner.name
+    @situation = @post.situation.name
+    @comment = Comment.new
+    @comments = @post.comments.includes(:user).order(created_at: :desc)
+  end
+
   def new
     @post = Post.new
+  end
+
+  def edit
+    @post = current_user.posts.find(params[:id])
   end
 
   def create
@@ -18,19 +31,6 @@ class PostsController < ApplicationController
       flash.now['danger'] = t('defaults.message.not_created', item: Post.model_name.human)
       render :new, status: :unprocessable_entity
     end
-  end
-
-  def show
-    @post = Post.find(params[:id])
-    @genre = @post.genre.name
-    @partner = @post.partner.name
-    @situation = @post.situation.name
-    @comment= Comment.new
-    @comments = @post.comments.includes(:user).order(created_at: :desc)
-  end
-
-  def edit
-    @post = current_user.posts.find(params[:id])
   end
 
   def update
