@@ -1,6 +1,11 @@
 class ProfilesController < ApplicationController
   before_action :set_user, only: %i[edit update]
 
+  def show
+    @user = User.find(params[:id])
+    @posts = @user.posts.order(created_at: :desc).page(params[:page])
+  end
+
   def edit; end
 
   def update
@@ -10,11 +15,6 @@ class ProfilesController < ApplicationController
       flash.now['danger'] = t('defaults.message.not_updated', item: User.model_name.human)
       render :edit
     end
-  end
-
-  def show
-    @user = User.find(params[:id])
-    @posts = @user.posts.order(created_at: :desc).page(params[:page])
   end
 
   private

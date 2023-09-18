@@ -30,5 +30,4 @@ class Notification < ApplicationRecord
     commented_to_own_post: 0,
     liked_to_own_post: 1
   }
-
 end

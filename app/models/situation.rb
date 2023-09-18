@@ -9,9 +9,9 @@
 #  updated_at :datetime         not null
 #
 class Situation < PostDetail
-  has_many :posts
+  has_many :posts, dependent: :destroy
 
   def self.ransackable_attributes(auth_object = nil)
-    ["id", "type", "name"]
+    %w[id type name]
   end
 end

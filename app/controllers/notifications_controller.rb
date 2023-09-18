@@ -5,9 +5,7 @@ class NotificationsController < ApplicationController
 
   def read
     notification = current_user.notifications.find(params[:id])
-    unless notification.read?
-      notification.update(read: true)
-    end
+    notification.update(read: true) unless notification.read?
     redirect_to notification.notifiable.appropiate_path
   end
 end

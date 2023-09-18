@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
   skip_before_action :require_login, only: %i[new create]
 
+  def show
+    @user = User.find(params[:id])
+    @posts = @user.posts.order(created_at: :desc).page(params[:page])
+    @like_posts = current_user.like_posts.includes(:user).order(created_at: :desc).page(params[:page])
+  end
+
   def new
     @user = User.new
   end
@@ -15,16 +21,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    @user = User.find(params[:id])
-    @posts = @user.posts.order(created_at: :desc).page(params[:page])
-    @like_posts = current_user.like_posts.includes(:user).order(created_at: :desc).page(params[:page])
-  end
-
   private
 
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation, :name)
   end
-
 end
